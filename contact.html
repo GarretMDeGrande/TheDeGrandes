@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheDeGrandes</title>
+  <link rel="stylesheet" href="contact.css" type="text/css">
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <a href="home.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="event.html">Event Info</a>
+      <a href="visitor.html">Visitor Info</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a href="seniorproject.html">Senior Project</a>
+    </nav>
+  </header>
+  <main> 
+    <h1 id="contact-heading">Contact Us</h1>
+    <div class="contact-form">
+   <form action="contact.php" method="POST">
+      <label for="name">First Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="name">Last Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+  
+      <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+  
+  <footer>Created by Garret DeGrande</footer>
+</body>
+</html>

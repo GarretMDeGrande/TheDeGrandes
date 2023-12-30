@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  background-color: black;
+  color: gold;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  padding: 20px 0;
+  font-size: 20px;
+  border-bottom: 1px solid gold;
+}
+
+#navbar a {
+  text-decoration: none;
+  padding: 0 10px;
+  color: gold;
+}
+
+.mapouter {
+  position: absolute;
+  bottom: 1;
+  width: 100%;
+  text-align: center;
+  }
+  
+ .gmap_canvas {
+   overflow: hidden;
+   background: none!important;
+   height: 200px;
+   width: 300px;
+   margin: 0 auto; /* Center the map horizontally */
+}
+
+footer {
+  background: black;
+  color: gold;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  border-top: 1px solid gold;
+}
