@@ -86,6 +86,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  color: gold;
+}
+
 footer {
   background: black;
   color: gold;
