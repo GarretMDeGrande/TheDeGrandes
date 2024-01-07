@@ -10,7 +10,7 @@ try {
     $mail->setFrom('noreply@yoursite.com');
     $mail->addAddress('thedegrandes@gmail.com');
     $mail->Subject = 'Mail From Website';
-    $mail->Body = "First Name = $firstname\r\nLast Name = $lastname\r\nEmail = $email\r\nMessage = $message";
+    $mail->Body = "firstname = $firstname\r\nlastname = $lastname\r\nemail = $email\r\nmessage = $message";
     $mail->send();
     echo 'Mail sent successfully.<br>';
     header("Location: thankyou.html");
