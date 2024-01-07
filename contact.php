@@ -1,7 +1,10 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
 mail('thedegrandes@gmail.com', 'Test Subject', 'Test Message');
+
+echo "Script is running."; // Add this for basic debugging
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the values from the form
@@ -15,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $to = "thedegrandes@gmail.com";
         $subject = "Mail From Website";
-        $txt = "First Name: $firstname\r\nLast Name: $lastname\r\nEmail: $email\r\nPhone: $phone\r\nMessage: $message";
+        $txt = "First Name = $firstname\r\nLast Name = $lastname\r\nEmail = $email\r\nMessage = $message";
         $headers = "From: noreply@yoursite.com\r\n" .
             "CC: somebodyelse@example.com";
 
@@ -32,5 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Handle the case where email is empty or invalid
         echo "Email is required and must be valid.";
     }
+}else {
+    echo "Form submitted successfully.";
 }
 ?>
