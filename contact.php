@@ -23,19 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "CC: somebodyelse@example.com";
 
         // Send the email
-        if (mail($to, $subject, $txt, $headers)) {
-            // Redirect to the thank you page
-            header("Location: thankyou.html");
-            exit(); // Exit to ensure no further code is executed
-        } else {
-            // Handle email sending failure (e.g., display an error message)
-            echo "Message could not be sent. Please try again later.";
-        }
+       if (mail($to, $subject, $txt, $headers)) {
+        echo "Mail sent successfully.<br>";
+        header("Location: thankyou.html");
+        exit();
     } else {
-        // Handle the case where email is empty or invalid
-        echo "Email is required and must be valid.";
+        echo "Error: Message could not be sent.<br>";
     }
-}else {
-    echo "Form submitted successfully.";
+} else {
+    echo "Form submitted successfully.<br>";
 }
 ?>
