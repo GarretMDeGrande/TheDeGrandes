@@ -1,16 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the values from the form
-    $name = $_POST['name'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    // Check if email is not empty (you should add more comprehensive validation)
-    if (!empty($email)) {
+    // Check if email is not empty and is valid
+    if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $to = "thedegrandes@gmail.com";
         $subject = "Mail From Website";
-        $txt = "Name = $name\r\nEmail = $email\r\nMessage = $message";
+        $txt = "First Name = $firstname\r\nLast Name = $lastname\r\nEmail = $email\r\nMessage = $message";
         $headers = "From: noreply@yoursite.com\r\n" .
             "CC: somebodyelse@example.com";
 
@@ -24,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Message could not be sent. Please try again later.";
         }
     } else {
-        // Handle the case where email is empty (e.g., display an error message)
-        echo "Email is required.";
+        // Handle the case where email is empty or invalid
+        echo "Email is required and must be valid.";
     }
 }
 ?>
