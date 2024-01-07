@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 try {
-    $mail->setFrom('noreply@yoursite.com');
+    $mail->setFrom('noreply@https://garretmdegrande.github.io/TheDeGrandes/');
     $mail->addAddress('thedegrandes@gmail.com');
     $mail->Subject = 'Mail From Website';
     $mail->Body = "firstname = $firstname\r\nlastname = $lastname\r\nemail = $email\r\nmessage = $message";
