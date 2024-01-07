@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $to = "thedegrandes@gmail.com";
         $subject = "Mail From Website";
-        $txt = "First Name = $firstname\r\nLast Name = $lastname\r\nEmail = $email\r\nMessage = $message";
+        $txt = "First Name: $firstname\r\nLast Name: $lastname\r\nEmail: $email\r\nPhone: $phone\r\nMessage: $message";
         $headers = "From: noreply@yoursite.com\r\n" .
             "CC: somebodyelse@example.com";
 
